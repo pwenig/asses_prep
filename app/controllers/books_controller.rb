@@ -3,6 +3,7 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
   end
+
   def new
     @books = Book.new
   end
@@ -14,11 +15,24 @@ class BooksController < ApplicationController
     else
       render :new
     end
-
   end
+
+  def show
+    @book = Book.find(params[:id])
+  end
+
+  def edit
+    @book = Book.find(params[:id])
+  end
+
+def update
+  @book = Book.find(params[:id])
+  @book.update_attributes(book_params)
+  redirect_to '/books'
+end
 
   private
   def book_params
-   params.require(:book).permit(:name, :author)
+    params.require(:book).permit(:name, :author)
   end
 end

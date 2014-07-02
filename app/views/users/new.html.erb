@@ -1,15 +1,17 @@
 <h2>New User</h2>
 
+<div class="registration_form">
+  <ul>
 <%= form_for @user do |u| %>
-  <%= u.label :name %>
-  <%= u.text_field :name %>
-  <%= u.label :password %>
-  <%= u.password_field :password %>
-  <%= u.label :password_confirmation %>
-  <%= u.password_field :password_confirmation %>
-
-  <%= u.submit "Submit" %>
+  <li><%= u.label :name %></li>
+  <li><%= u.text_field :name %></li>
+  <li><%= u.label :password %></li>
+  <li><%= u.password_field :password %></li>
+  <li><%= u.label :password_confirmation %></li>
+  <li><%= u.password_field :password_confirmation %></li>
+  <li><%= u.submit "Submit" %></li>
   <% end %>
 
-
-<h3><%= link_to 'Login', new_session_path %></h3>
+<h3><li><%= link_to 'Login', new_session_path %></h3></li>
+  </ul>
+</div>

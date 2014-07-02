@@ -9,6 +9,7 @@
       <li><%= book.label :author %></li>
       <%= book.text_field :author, value: @book.author %>
       <li><%= book.submit "Submit" %></li>
-  </ul>
     <% end %>
+   <br><li><%= link_to 'Delete', book_path(@book), method: :delete %></li>
+  </ul>
 </div>

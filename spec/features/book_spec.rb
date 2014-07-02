@@ -9,9 +9,7 @@ feature 'Books' do
     fill_in 'name', with: "Keith Richards"
     fill_in 'password', with: "Stones8"
     click_on 'Submit'
-
     create_book
-
     visit '/books'
 
     expect(page).to have_content "Everyman"
@@ -19,24 +17,35 @@ feature 'Books' do
 
   scenario 'User can edit a book listing' do
     create_user
-
     visit '/'
     click_on 'Register/Login'
     click_on 'Login'
     fill_in 'name', with: "Keith Richards"
     fill_in 'password', with: "Stones8"
     click_on 'Submit'
-
     create_book
     visit '/books'
-
     click_on "Everyman"
     click_on "Everyman"
-
     fill_in 'book[name]', with: "The Road"
     fill_in 'book[author]', with: "Cormack McCarthy"
     click_on 'Submit'
-
     expect(page).to have_content "The Road"
+  end
+
+  scenario 'User can delete a book listing' do
+    visit '/'
+    click_on 'Register/Login'
+    click_on 'Login'
+    fill_in 'name', with: "Keith Richards"
+    fill_in 'password', with: "Stones8"
+    click_on 'Submit'
+    create_book
+    visit '/books'
+    click_on "Everyman"
+    click_on "Everyman"
+    click_on 'Delete'
+    expect(page).to_not have_content "Everyman"
+
   end
 end

@@ -31,6 +31,11 @@ def update
   redirect_to '/books'
 end
 
+  def destroy
+    @book = Book.delete(params[:id])
+    redirect_to '/books'
+  end
+
   private
   def book_params
     params.require(:book).permit(:name, :author)

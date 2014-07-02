@@ -4,11 +4,11 @@
   <ul>
 <%= form_for @user do |u| %>
   <li><%= u.label :name %></li>
-  <li><%= u.text_field :name %></li>
+  <%= u.text_field :name %>
   <li><%= u.label :password %></li>
-  <li><%= u.password_field :password %></li>
+  <%= u.password_field :password %>
   <li><%= u.label :password_confirmation %></li>
-  <li><%= u.password_field :password_confirmation %></li>
+  <%= u.password_field :password_confirmation %>
   <li><%= u.submit "Submit" %></li>
   <% end %>
 

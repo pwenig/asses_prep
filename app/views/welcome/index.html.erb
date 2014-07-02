@@ -4,6 +4,7 @@
 
 <% if current_user %>
   <h1><%= link_to 'Logout', sessions_path, :method => :delete %></h1>
+  <h2><%= link_to 'Add Books', new_book_path %></h2>
   <% else %>
 <h1><%= link_to 'Register/Login', new_user_path %></h1>
 <% end %>

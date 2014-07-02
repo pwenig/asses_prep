@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
   delete 'sessions' => 'sessions#delete'
+  resources :books
 
 end

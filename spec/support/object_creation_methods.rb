@@ -8,3 +8,4 @@ def create_user(updated_attributes = {})
   attributes = default_attributes.merge(updated_attributes)
   User.create(attributes)
 end
+

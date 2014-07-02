@@ -1,0 +1,14 @@
+<h2>Login</h2>
+
+<div class="registration_form">
+  <ul>
+      <%= form_tag({:controller => :sessions, :action => :create}) %>
+      <li><%= label_tag :name %></li>
+      <li><%= text_field_tag :name %></li>
+      <li><%= label_tag :password %></li>
+      <li><%= password_field_tag :password %></li>
+
+      <li><%= submit_tag "Submit" %></li>
+
+    </ul>
+  </div>

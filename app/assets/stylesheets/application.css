@@ -57,3 +57,7 @@
     border-radius: 5px;
     border: none;
 }
+
+.messages {
+    font-size: 24px;
+}

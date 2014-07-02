@@ -26,4 +26,26 @@ feature 'Users' do
   expect(page).to have_content "All fields required"
   end
 
+  scenario 'User can login' do
+    create_user
+    visit '/'
+    click_on 'Register/Login'
+    click_on 'Login'
+    fill_in 'name', with: "Keith Richards"
+    fill_in 'password', with: "Stones8"
+    click_on 'Submit'
+    expect(page).to have_content "Welcome, Keith Richards "
+  end
+
+  scenario 'User can logout' do
+    create_user
+    visit '/'
+    click_on 'Register/Login'
+    click_on 'Login'
+    fill_in 'name', with: "Keith Richards"
+    fill_in 'password', with: "Stones8"
+    click_on 'Submit'
+    click_on 'Logout'
+    expect(page).to_not have_content "Welcome, Keith Richards"
+  end
 end

@@ -1,0 +1,15 @@
+<h2>New User</h2>
+
+<%= form_for @user do |u| %>
+  <%= u.label :name %>
+  <%= u.text_field :name %>
+  <%= u.label :password %>
+  <%= u.password_field :password %>
+  <%= u.label :password_confirmation %>
+  <%= u.password_field :password_confirmation %>
+
+  <%= u.submit "Submit" %>
+  <% end %>
+
+
+<h3><%= link_to 'Login', new_session_path %></h3>

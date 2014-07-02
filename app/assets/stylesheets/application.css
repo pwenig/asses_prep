@@ -120,6 +120,18 @@
     font-size: 20px;
 }
 
+.header {
+ margin-left: 70%;
+}
+
+.header ul {
+    list-style-type: none;
+}
+
+.header li {
+    font-size: 20px;
+}
+
 .messages {
     font-size: 24px;
 }

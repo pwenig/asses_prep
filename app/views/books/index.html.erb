@@ -1,6 +1,6 @@
 <h2>All Books</h2>
 
 <% @books.each do |book| %>
-<%= book.name %>
+  <a href='/books/<%= book.id %>'><%= book.name %></a>
 <%= book.author %>
 <% end %>

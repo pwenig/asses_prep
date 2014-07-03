@@ -1,10 +1,25 @@
 <h2>All Books</h2>
 <% @books.each do |book| %>
-<div class="item_listing">
-  <ul>
-  <li><a href='/books/<%= book.id %>'><%= book.name %></a></li>
-<li><%= book.author %></li>
-  </ul>
-</div>
-<br>
+  <div class="item_listing">
+    <ul>
+      <li><a href='/books/<%= book.id %>'><%= book.name %></a></li>
+      <li><%= book.author %></li>
+      <%= link_to 'Add Comment', new_book_comment_path(book) %>
+      <br>
+      <% if !@comments.nil? %>
+        <% @comments.each do |comment| %>
+
+
+          <% if comment.book_id == book.id %>
+            <%= comment.user.name %>:
+            <%= comment.comment %>
+          <% end %>
+          <br>
+        <% end %>
+      <% end %>
+
+
+    </ul>
+  </div>
+  <br>
 <% end %>

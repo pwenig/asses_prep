@@ -1,7 +1,11 @@
 <h2>All Albums</h2>
 
-<%= @albums.each do |album| %>
-<%= album.artist %>
-  <a href="/albums/<%= album.id %>"><%= album.title %></a>
-
+<div class="item_listing">
+  <ul>
+<% @albums.each do |album| %>
+<li><%= album.artist %></li>
+ <li><a href='/albums/<%= album.id %>'><%= album.title %></a></li>
+      </ul>
+    </div>
+      <br>
 <% end %>

@@ -1,10 +1,15 @@
 <h3>Edit Album</h3>
 
+<div class="item_form">
+  <ul>
 <%= form_for @album do |album| %>
-  <%= album.label :title, value: @album.title %>
+  <li><%= album.label :title, value: @album.title %></li>
   <%= album.text_field :title %>
-  <%= album.label :artist, value: @album.artist %>
+  <li><%= album.label :artist, value: @album.artist %></li>
   <%= album.text_field :artist %>
-  <%= album.submit "Submit" %>
-<% end %>
+ <li><%= album.submit "Submit" %></li>
+  <% end %>
+
 <%= link_to 'Delete', album_path(@album), method: :delete %>
+  </ul>
+</div>

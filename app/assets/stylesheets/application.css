@@ -121,7 +121,7 @@
 }
 
 .header {
- margin-left: 70%;
+ margin-left: 50%;
 }
 
 .header ul {
@@ -130,6 +130,7 @@
 
 .header li {
     font-size: 20px;
+    margin-left: 50%;
 }
 
 .messages {

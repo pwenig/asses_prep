@@ -2,11 +2,6 @@ require 'spec_helper'
 
 feature 'Users' do
 
-  scenario 'Users' do
-    visit '/'
-    expect(page).to have_content "Welcome"
-  end
-
   scenario 'User can register' do
     visit '/'
     click_on 'Register/Login'

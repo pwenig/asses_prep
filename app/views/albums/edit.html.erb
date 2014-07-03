@@ -7,3 +7,4 @@
   <%= album.text_field :artist %>
   <%= album.submit "Submit" %>
 <% end %>
+<%= link_to 'Delete', album_path(@album), method: :delete %>

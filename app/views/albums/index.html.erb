@@ -5,6 +5,7 @@
   <ul>
 <li><%= album.artist %></li>
  <li><a href='/albums/<%= album.id %>'><%= album.title %></a></li>
+    <%= link_to 'Add Comment', new_album_comment_path(album) %>
       </ul>
     </div>
       <br>

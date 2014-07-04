@@ -44,18 +44,14 @@ feature 'Albums' do
 
   scenario 'User can delete an album listing' do
     create_user
+    create_album
     visit '/'
     click_on 'Register/Login'
     click_on 'Login'
     fill_in 'name', with: "Keith Richards"
     fill_in 'password', with: "Stones8"
     click_on 'Submit'
-
-    click_on 'Add Albums'
-    fill_in 'album[title]', with: "Beggars Banquet"
-    fill_in 'album[artist]', with: "Rolling Stones"
-    click_on 'Submit'
-
+    click_on 'View Albums'
     click_on "Beggars Banquet"
     click_on "Beggars Banquet"
 

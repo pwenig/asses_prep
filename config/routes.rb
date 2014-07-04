@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   resources :books do
     resources :comments
   end
-  resources :albums
+  resources :albums do
+    resources :comments
+  end
 
 
 end

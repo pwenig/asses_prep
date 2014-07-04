@@ -2,14 +2,14 @@ class CommentsController < ApplicationController
 
   def new
     @comment = Comment.new
-    @book = Book.find(params[:book_id])
+    @book = Book.find(params[:book_id]) unless params[:book_id] == nil
   end
 
   def create
 
     @comment = Comment.new(comment: params[:comment][:comment],
                           user_id: current_user.id,
-                          book_id: params[:book_id]
+                          book_id: params[:book_id],
     )
     if @comment.save
       redirect_to books_path

@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20140703163848) do
   create_table "comments", force: true do |t|
     t.integer "user_id"
     t.integer "book_id"
+    t.integer "album_id"
     t.string  "comment"
   end
 
